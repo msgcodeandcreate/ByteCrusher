@@ -4,7 +4,7 @@
 
 ### Frontend
  
-- Yavuz
+- Yavuz aaaaaaaa committed
 - Nina
 - Akil
 
