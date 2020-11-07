@@ -1,36 +1,48 @@
-<div style="width: 400px; height: 300px; margin: auto;">
+<div class="outer-div">
 
     <mat-toolbar>
-        <div>
+        <div class="header">
             <span> Profil </span>
-            <button (click)="closeDialog()"> X </button>
+            <div class="close-dialog">
+                <button (click)="closeDialog()"> X </button>
+            </div>
         </div>
     </mat-toolbar>
 
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>
-            <div>
-                {{data.firstname}}
-                {{data.lastname}}
-            </div>
-        </mat-grid-tile>
-    
-        <mat-grid-tile>
+
+    <!-- <div>
+        <i class="fas fa-user-circle">TEXTTExt</i>
+    </div> -->
+
+    <div class="photo"></div>
+
+
+    <mat-grid-list class="profile-data" cols="2" rowHeight="2:1">
+        <div class="profile-data-item">
+            <p>Name</p>
+            {{data.firstname}}
+            {{data.lastname}}
+        </div>
+
+        <div class="profile-data-item">
+            <p>Studiengang</p>
             {{data.bio}}
-        </mat-grid-tile>
-    
-        <mat-grid-tile>
+        </div>
+
+        <div class="profile-data-item">
+            <p>E-Mail</p>
             <div style="display: flex; flex-direction: column;">
-                <div>
+                <!-- <div>
                     {{data.firstname}}
                     {{data.lastname}}
-                </div>
+                </div> -->
                 <div> {{data.mail}}</div>
 
             </div>
-        </mat-grid-tile>
-    
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
+        </div>
 
-
+        <div class="profile-data-item">
+            <p>Contact</p>
+            4
+        </div>
+    </mat-grid-list>
