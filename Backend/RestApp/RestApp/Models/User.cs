@@ -18,7 +18,7 @@ namespace RestApp.Models
 
     public string Bio { get; set; }
 
-    public string BirthDay { get; set; }
+    public string Birthday { get; set; }
 
   }
 }
