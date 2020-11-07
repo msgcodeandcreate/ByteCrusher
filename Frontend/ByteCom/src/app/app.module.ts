@@ -9,6 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './content/chat/chat.component';
 import { ChatsComponent } from './content/chat/sidenavs/left/chats/chats.component';
 import { ChatStartComponent } from './content/chat/chat-start/chat-start.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { NewChatComponent } from './content/chat/sidenavs/left/chats/new-chat/new-chat.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { ProfileDialogComponent } from './content/chat/profile-dialog/profile-dialog.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -17,14 +26,23 @@ import { ChatStartComponent } from './content/chat/chat-start/chat-start.compone
     RegistrationComponent,
     ChatComponent,
     ChatsComponent,
-    ChatStartComponent
+    ChatStartComponent,
+    NewChatComponent,
+    ProfileDialogComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

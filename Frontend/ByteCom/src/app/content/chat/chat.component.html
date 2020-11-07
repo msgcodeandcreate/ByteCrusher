@@ -1,10 +1,34 @@
-<!-- <mat-drawer-container class="content">
-    <mat-drawer mode="side" opened>
-        test
-        <app-chats></app-chats>
-    </mat-drawer>
-    <mat-drawer-content>
-        test
-        <app-chat-start *ngIf="!selectedChat"></app-chat-start>
-    </mat-drawer-content>
-  </mat-drawer-container> -->
+<div style="height: 100%;">
+    
+    <div class="header">
+        <mat-toolbar>
+            <div class="title">
+
+                ByteCom
+            </div>
+
+            <mat-toolbar-row *ngFor="let logged of loggedUser">
+                {{date | date: 'EEE dd.MM.yyyy'}}
+                <div> Hallo {{logged.name}}</div>
+                <div>Hier kommt das Profilbild hin</div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+
+  <mat-sidenav-container>
+
+    <!-- LEFT SIDENAV -->
+    <mat-sidenav opened
+                 mode="side"
+     >
+     <app-chats></app-chats>
+    </mat-sidenav>
+    <!-- / LEFT SIDENAV -->
+
+    <!-- CONTENT -->
+    <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
+    <!-- / CONTENT -->
+
+</mat-sidenav-container>
+
+</div>
