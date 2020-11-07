@@ -1,0 +1,9 @@
+<form [formGroup]="login" >
+    Name: <input formControlName="name"  placeholder="Enter Name">
+    Password: <input formControlName="password"  placeholder="Enter Password">
+    <button type="submit">Submit</button> 
+</form>
+
+<div>
+    <a [routerLink]="['/registration']">Register</a>
+</div>
