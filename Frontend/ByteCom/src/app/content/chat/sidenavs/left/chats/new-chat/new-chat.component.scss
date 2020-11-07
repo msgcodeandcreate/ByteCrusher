@@ -1,0 +1,58 @@
+.backspace div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.2rem;
+    // margin-left: 25%;
+}
+
+.neuer-chat {
+    background-color: rgba(196, 205, 209, 0.746);
+}
+
+.neuer-chat .backspace {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.search input {
+    width: 150%;
+    border: none;
+    height: 2rem;
+    color: rgba(0, 0, 0, 0.54);
+    padding-left: 1rem;
+}
+
+.search input:hover {
+    background-color: rgba(196, 205, 209, 0.746);
+}
+
+// .search input::placeholder {
+//     padding-left: 1rem;
+// }
+
+input:focus{
+    outline: none;
+}
+
+.contacts {
+    display: flex;
+    border-bottom: 1px solid rgba(196, 205, 209, 0.746);
+    height: 3rem;
+    letter-spacing: 0.1rem;
+    text-align: start;
+    padding: 0 2rem;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.contacts:hover {
+    // margin-left: 1rem;
+    border-left: 2rem solid rgba(72, 80, 83, 0.746);
+}
+
+.contacts:first-child {
+    border-top: 1px solid rgba(196, 205, 209, 0.746);
+}
+
+.contacts:nth-of-type(2n) {
+    background-color:  rgba(196, 205, 209, 0.746);
+}
