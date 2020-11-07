@@ -1,0 +1,28 @@
+<div class="chat">
+    <div class="center">
+        <div class="content-card">
+            <mat-sidenav-container>
+    
+                <!-- LEFT SIDENAV -->
+                <mat-sidenav class="sidenav mat-sidenav-opened "
+                             position="start"
+                             opened="false"
+                             mode="side"
+                             fuseMatSidenavHelper="chat-left-sidenav"
+                             mat-is-locked-open="gt-xs">
+                    <app-chats></app-chats>
+                </mat-sidenav>
+                <!-- / LEFT SIDENAV -->
+    
+                <!-- CONTENT -->
+                <app-chat-start *ngIf="!selectedChat"></app-chat-start>
+    
+                <!-- <fuse-chat-view style="max-width: 100%;"
+                                *ngIf="selectedChat"></fuse-chat-view> -->
+                <!-- / CONTENT -->
+    
+              
+            </mat-sidenav-container>
+        </div>
+    </div>>
+</div>
