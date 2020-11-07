@@ -1,13 +1,14 @@
-.header {
-    height: 10%;
-}
-
 .outer_div {
-    height: 100%;
+    width: 90%;
+    margin: 5% 5%;
+    border: 2px solid rgba(196, 205, 209, 0.746);
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .title {
+    width: 30%;
+    margin: 0 auto;
     font-weight: 500;
     letter-spacing: 0.3rem;
     display: flex;
@@ -15,21 +16,22 @@
     font-size: 2.5rem;
     height: fit-content;
     padding: 1rem 0;
+    border-bottom: 1px solid rgba(196, 205, 209, 0.746);
+    box-shadow: 0 2px 2px -2px gray;
 }
 
 mat-toolbar-row {
     display: flex;
     justify-content: space-between;
+    padding: 0 5rem;
 }
-
-
 
 .mat-sidenav-container {
     display: flex;
     flex: 1;
     width: 100%;
-    // background: transparent;
     height: 500px;
+    border-top: 1px solid rgba(196, 205, 209, 0.746);
 
     mat-sidenav {
         display: flex;
@@ -39,4 +41,8 @@ mat-toolbar-row {
         box-shadow: 0 0 1px rgba(0, 0, 0, .37);
         overflow: hidden;
     }
+}
+
+.date-hallo-pp {
+    font-weight: 300;
 }

@@ -6,7 +6,7 @@
                 ByteCom
             </div>
 
-            <mat-toolbar-row *ngFor="let logged of loggedUser">
+            <mat-toolbar-row class="date-hallo-pp" *ngFor="let logged of loggedUser">
                 {{date | date: 'EEE dd.MM.yyyy'}}
                 <div> Hallo {{logged.name}}</div>
                 <div>Hier kommt das Profilbild hin</div>
