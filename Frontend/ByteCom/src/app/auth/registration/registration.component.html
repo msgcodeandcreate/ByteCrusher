@@ -1,5 +1,5 @@
 <form [formGroup]="registration">
-    <div class="reg_tag">Sign In</div>
+    <div class="reg_tag">Sign Up</div>
     <div class="reg_data">
         <span>First Name</span><input formControlName="firstname" placeholder="Enter First Name">
         <span>Last Name</span><input formControlName="lastname" placeholder="Enter Last Name">
@@ -7,5 +7,5 @@
         <span>Repeat Password</span><input type="password" formControlName="password2" placeholder="Repeat Password">
         <span>Email</span><input formControlName="email" placeholder="Enter Email">
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" (click)="CreateUser()">Submit</button>
 </form>

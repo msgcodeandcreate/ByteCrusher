@@ -19,14 +19,24 @@ export class ChatsComponent implements OnInit {
   public userChatList = (data as any).default;
   public chat: any;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
 
-  ngOnInit(): void {
+   }
+
+  ngOnInit() {
   }
 
   public openProfile(chat) {
     const dialog = this.dialog.open(ProfileDialogComponent, {
-      data: {selectedUser: this.chat}
+      data: {
+        name: chat.name,
+        lastname: chat.lastname,
+        bio: chat.bio,
+        mail: chat.mail
+      }
     });
+
+    
+
   }
 }
