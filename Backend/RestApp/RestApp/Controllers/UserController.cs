@@ -29,7 +29,7 @@ namespace RestApp.Models
             UserId = 1,
             Password = "1324",
             Bio = "Some Bio",
-            BirthDay = "18.09.1965"
+            Birthday = "18.09.1965"
           }
         };
 
@@ -56,7 +56,7 @@ namespace RestApp.Models
           UserId = 1,
           Password = "1324",
           Bio = "Some Bio",
-          BirthDay = "18.09.1965"
+          Birthday = "18.09.1965"
         };
 
         return Request.CreateResponse(HttpStatusCode.OK, JsonConvert.SerializeObject(user));
