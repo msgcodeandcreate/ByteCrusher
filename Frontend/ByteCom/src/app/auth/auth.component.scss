@@ -1,3 +1,28 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.877);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #2980b9;
+}
+
+.welcome_div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    width: 50%;
+    margin: 2.3rem auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.877);   
+}
+
 .auth {
     display: flex;
     flex-direction: row;
@@ -6,13 +31,16 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: 110%;
+    width: 60%;
+    height: 100%;
     align-items: center;
-    border: 1px solid rgb(105, 105, 133);
+    border: 1px solid rgba(151, 231, 255, 0.877);
     border-radius: 10px;
     background-color: #2980b9;
     padding-top: 2rem;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
+    margin: 0 25%;
+    padding: 1rem;
 }
 
 .reg_tagAuth {
@@ -23,7 +51,7 @@ form {
     color: white;
     padding-bottom: 3rem;
     margin-top: 0;
-    
+    padding-top: 1rem;
 }
 
 .reg_dataAuth {
@@ -35,16 +63,14 @@ form {
     
 }
 
-.reg_dataAuth input {
-    margin: 10px 0;
-}
-
 input {
     background-color: #f7f7f7;
     border-radius: 5px;
     color: #2980b9;
     border: 3px solid rgba(0, 0, 0, 0);
-    width: 140%;
+    width: 180%;
+    margin: 10px 0;
+    letter-spacing: 1px;
 }
 
 input::placeholder {  
@@ -56,6 +82,10 @@ input:focus {
 	outline: none;
 }
 
+input:hover {
+    border: 3px solid rgba(63, 180, 216, 0.719);
+}
+
 button {
     width: 30%;
     height: 1.5rem;
@@ -63,5 +93,11 @@ button {
     margin-top: 3rem;
     border-radius: 5px;
     border: none;
-    
+    transition: 0.1s;
+    margin-top: 10.7rem;
+}
+
+button:hover {
+    background-color: rgba(151, 231, 255, 0.877);
+    border: 3px solid rgba(151, 231, 255, 0.877);
 }
