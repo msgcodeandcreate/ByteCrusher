@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as loggedUser from '../../../assets/loggedUser.json'
 
 @Component({
   selector: 'app-chat',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ChatComponent implements OnInit {
 
   public selectedChat: boolean = false;
+  public date: Date =  new Date();
+
+  public loggedUser = (loggedUser as any).default;
+  
   
   constructor() { }
 

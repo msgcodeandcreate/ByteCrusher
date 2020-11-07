@@ -1,0 +1,30 @@
+.buttons {
+    display: flex;
+}
+
+mat-icon {
+    vertical-align: middle;
+}
+
+.search {
+    
+    background: #FFFFFF;
+    font-size: 13px;
+
+    .icon {
+        margin: 0;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    input {
+        padding-left: 12px;
+        height: 20px;
+        color: rgba(0, 0, 0, 0.54);
+        border: none;
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}

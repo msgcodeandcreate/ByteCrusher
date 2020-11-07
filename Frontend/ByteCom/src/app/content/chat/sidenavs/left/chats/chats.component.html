@@ -1,1 +1,95 @@
-<p>chats works!</p>
+<mat-drawer #newchat
+            mode="over"
+            style="width: 100%;">
+    <app-new-chat style="width: 100%;" (closeChatSideNav)="newchat.toggle()"> </app-new-chat>
+</mat-drawer>
+
+<div class="sidenav-header">
+    <mat-toolbar>
+        <mat-toolbar-row style="justify-content: space-between;">
+            
+            <div class="buttons">
+
+                <div>
+                    <button mat-icon-button (click)="newchat.toggle()">
+                        <mat-icon> add </mat-icon>
+                    </button>
+                </div>
+            
+                <div>
+                    <button mat-icon-button
+                            [matMenuTriggerFor]="invMenu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </div>
+            
+                <mat-menu #invMenu="matMenu"
+                        >
+                    <button mat-menu-item>
+                    new group
+                    </button>
+                </mat-menu>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-wrapper"
+        fxFlex
+        fxLayout="row"
+        fxLayoutAlign="start center">
+
+        <div class="search"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center">
+
+            <mat-icon>search</mat-icon>
+
+            <input #search
+                
+                type="text"
+                placeholder="Search Chat"
+                fxFlex>
+                </div>
+            </div>
+            <!-- / SEARCH -->  
+        </mat-toolbar-row>
+<!-- 
+        <mat-toolbar-row>
+         
+        </mat-toolbar-row> -->
+    </mat-toolbar>
+
+    <div class="sidenav-content">
+        <div class="contact-list" *ngIf="userChatList.length > 0; else noChats">
+            <div class="contacts" 
+                *ngFor="let chat of userChatList">
+               {{chat.name}} {{chat.lastname}}
+
+                <div>
+                    <button mat-icon-button
+                            [matMenuTriggerFor]="invMenu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </div>
+                <mat-menu #invMenu="matMenu">
+                    <button mat-menu-item (click)="openProfile()">
+                    Profil anzeigen
+                    </button>
+                    <button mat-menu-item>
+                    Chat löschen
+                    </button>
+                    <button mat-menu-item>
+                        Chat archivieren
+                    </button>
+                </mat-menu>
+                </div>
+        </div>
+
+        <ng-template #noChats>
+            Du hast bisher noch keine offenen Chats!
+        </ng-template>
+    </div>
+
+
+
+</div>

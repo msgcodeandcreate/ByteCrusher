@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <div class="backspace"
+        (click)="toggleChatSideNav()">
+     <mat-icon> keyboard_backspace </mat-icon>
+     <div> Neuer Chat </div>
+   </div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="search-toolbar">
+        <!-- SEARCH -->
+        <div class="search">
+          <mat-icon>search</mat-icon>
+          <input #search
+             
+                 type="text"
+                 placeholder="Search Contact"
+                 fxFlex
+                 style="border-radius: 18px; font-size: 15px;" />
+        </div>
+        <!-- / SEARCH -->
+      </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+  <div class="contacts" 
+    *ngFor="let contact of contacts">
+    <div >
+       {{contact.name}} {{contact.lastname}}
+    </div>
+  </div>
+</div>
