@@ -23,8 +23,10 @@
         <!-- / LEFT SIDENAV -->
 
         <!-- CONTENT -->
-        <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
-        <app-chat-view style="max-width: 100%;" *ngIf="selectedChat"> </app-chat-view>
+        <div style="width: 640px; height: 499px;">
+            <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
+            <app-chat-view style="max-width: 100%;" *ngIf="selectedChat"> </app-chat-view>
+        </div>
         <!-- / CONTENT -->
 
     </mat-sidenav-container>

@@ -8,7 +8,7 @@ import * as loggedUser from '../../../assets/loggedUser.json'
 })
 export class ChatComponent implements OnInit {
 
-  public selectedChat: boolean = true;
+  public selectedChat: boolean = false;
   public date: Date =  new Date();
 
   public loggedUser = (loggedUser as any).default;
