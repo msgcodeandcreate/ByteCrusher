@@ -1,13 +1,11 @@
-
-
-<div class="auth">
+<div class="auth login">
     <div style="width: 50%;">
-        <form [formGroup]="login" >
-            Name: <input formControlName="name"  placeholder="Enter Name">
-            Password: <input formControlName="password"  placeholder="Enter Password">
-            <button type="submit">Submit</button> 
+        <form [formGroup]="login">
+            Name: <input formControlName="name" placeholder="Enter Name">
+            Password: <input formControlName="password" placeholder="Enter Password">
+            <button type="submit">Submit</button>
         </form>
-        
+
         <div>
             <a [routerLink]="['/registration']">Register</a>
         </div>
