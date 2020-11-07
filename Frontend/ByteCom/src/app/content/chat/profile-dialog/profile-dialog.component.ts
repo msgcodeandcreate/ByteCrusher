@@ -1,32 +1,26 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-profile-dialog',
   templateUrl: './profile-dialog.component.html',
-  styleUrls: ['./profile-dialog.component.scss']
+  styleUrls: ['./profile-dialog.component.scss'],
+  encapsulation: ViewEncapsulation.None 
 })
 export class ProfileDialogComponent implements OnInit {
 
-  public selectedChatName: string;
-  public selectedChatLastName: string;
-  public selectedChatBio: string;
-  public selectedChatMail: string;
-
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data:any
+    @Inject(MAT_DIALOG_DATA) public data:any,
+    private dialogRef: MatDialogRef<ProfileDialogComponent>
   ) { 
-    if(data) {
-      console.log(data.name, 'data')
-      // this.selectedChatName = data.name;
-      console.log(this.selectedChatName)
-    }
-
     
   }
 
   ngOnInit(): void {
-    // console.log(this.data.selectedChat, "profile dialog");
+  }
+
+  public closeDialog() {
+    this.dialogRef.close();
   }
 
 }

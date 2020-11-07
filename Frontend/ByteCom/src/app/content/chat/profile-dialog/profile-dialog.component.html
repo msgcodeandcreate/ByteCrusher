@@ -1,4 +1,36 @@
-<p>profile-dialog works!</p>
+<div style="width: 400px; height: 300px; margin: auto;">
 
-{{data.name}}
+    <mat-toolbar>
+        <div>
+            <span> Profil </span>
+            <button (click)="closeDialog()"> X </button>
+        </div>
+    </mat-toolbar>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <div>
+                {{data.firstname}}
+                {{data.lastname}}
+            </div>
+        </mat-grid-tile>
+    
+        <mat-grid-tile>
+            {{data.bio}}
+        </mat-grid-tile>
+    
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column;">
+                <div>
+                    {{data.firstname}}
+                    {{data.lastname}}
+                </div>
+                <div> {{data.mail}}</div>
+
+            </div>
+        </mat-grid-tile>
+    
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+
 

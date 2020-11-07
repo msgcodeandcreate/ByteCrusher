@@ -28,8 +28,9 @@ export class ChatsComponent implements OnInit {
 
   public openProfile(chat) {
     const dialog = this.dialog.open(ProfileDialogComponent, {
+      panelClass: 'profile-dialog',
       data: {
-        name: chat.name,
+        firstname: chat.name,
         lastname: chat.lastname,
         bio: chat.bio,
         mail: chat.mail

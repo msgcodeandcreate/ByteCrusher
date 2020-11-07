@@ -19,6 +19,7 @@ import { ProfileDialogComponent } from './content/chat/profile-dialog/profile-di
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatExpansionModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
