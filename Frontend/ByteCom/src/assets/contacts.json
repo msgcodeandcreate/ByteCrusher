@@ -1,14 +1,27 @@
 [
     {
         "name": "Nina",
-        "lastname": "Fladrich"
+        "lastname": "Fladrich",
+        "mail": "nina.fladrich@",
+        "username" :"NinaFld",
+        "bio": "Studentin Media Engineering",
+        "birthdate": ""
+
     },
     {
         "name": "Yavuz",
-        "lastname": "Erkal"
+        "lastname": "Erkal",
+        "mail": "yavuz.erkal@",
+        "username" :"YavuzErkal",
+        "bio": "Student Informatik",
+        "birthdate": ""
     },
     {
         "name": "Akli",
-        "lastname": "Gönduz"
+        "lastname": "Gönduz",
+        "mail": "akli.gönduz@",
+        "username" :"AkliGönduz",
+        "bio": "Student Informatik",
+        "birthdate": ""
     }
 ]
