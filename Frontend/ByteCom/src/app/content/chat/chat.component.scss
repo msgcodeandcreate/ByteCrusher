@@ -2,9 +2,19 @@
     height: 10%;
 }
 
+.outer_div {
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .title {
+    font-weight: 500;
+    letter-spacing: 0.3rem;
     display: flex;
     justify-content: center;
+    font-size: 2.5rem;
+    height: fit-content;
+    padding: 1rem 0;
 }
 
 mat-toolbar-row {

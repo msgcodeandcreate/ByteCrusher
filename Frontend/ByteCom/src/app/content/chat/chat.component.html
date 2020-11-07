@@ -1,5 +1,5 @@
-<div style="height: 100%;">
-    
+<div class="outer_div">
+
     <div class="header">
         <mat-toolbar>
             <div class="title">
@@ -14,20 +14,18 @@
         </mat-toolbar>
     </div>
 
-  <mat-sidenav-container>
+    <mat-sidenav-container>
 
-    <!-- LEFT SIDENAV -->
-    <mat-sidenav opened
-                 mode="side"
-     >
-     <app-chats></app-chats>
-    </mat-sidenav>
-    <!-- / LEFT SIDENAV -->
+        <!-- LEFT SIDENAV -->
+        <mat-sidenav opened mode="side">
+            <app-chats></app-chats>
+        </mat-sidenav>
+        <!-- / LEFT SIDENAV -->
 
-    <!-- CONTENT -->
-    <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
-    <!-- / CONTENT -->
+        <!-- CONTENT -->
+        <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
+        <!-- / CONTENT -->
 
-</mat-sidenav-container>
+    </mat-sidenav-container>
 
 </div>

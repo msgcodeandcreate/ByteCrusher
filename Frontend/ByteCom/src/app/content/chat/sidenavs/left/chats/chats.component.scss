@@ -6,8 +6,18 @@ mat-icon {
     vertical-align: middle;
 }
 
+.buttons-and-search {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons-and-search .search-wrapper {
+    width: 80%;
+    padding: 0 1rem;
+}
+
 .search {
-    
+
     background: #FFFFFF;
     font-size: 13px;
 
@@ -18,13 +28,31 @@ mat-icon {
 
     input {
         padding-left: 12px;
-        height: 20px;
+        height: 2rem;
         color: rgba(0, 0, 0, 0.54);
         border: none;
+        width: 90%;
     }
 }
 
 .contacts {
     display: flex;
-    justify-content: space-between;
+    border-bottom: 1px solid rgba(196, 205, 209, 0.746);
+    height: 3rem;
+    letter-spacing: 0.1rem;
+    text-align: start;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.icon {
+    margin-left: auto;
+}
+
+.contacts:first-child {
+    border-top: 1px solid rgba(196, 205, 209, 0.746);
+}
+
+.contacts:nth-of-type(2n) {
+    background-color: rgba(196, 205, 209, 0.746);
 }

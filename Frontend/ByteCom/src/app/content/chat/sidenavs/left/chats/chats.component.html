@@ -1,13 +1,11 @@
-<mat-drawer #newchat
-            mode="over"
-            style="width: 100%;">
+<mat-drawer #newchat mode="over" style="width: 100%;">
     <app-new-chat style="width: 100%;" (closeChatSideNav)="newchat.toggle()"> </app-new-chat>
 </mat-drawer>
 
 <div class="sidenav-header">
     <mat-toolbar>
-        <mat-toolbar-row style="justify-content: space-between;">
-            
+        <mat-toolbar-row class="buttons-and-search">
+
             <div class="buttons">
 
                 <div>
@@ -15,45 +13,33 @@
                         <mat-icon> add </mat-icon>
                     </button>
                 </div>
-            
+
                 <div>
-                    <button mat-icon-button
-                            [matMenuTriggerFor]="invMenu">
+                    <button mat-icon-button [matMenuTriggerFor]="invMenu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
                 </div>
-            
-                <mat-menu #invMenu="matMenu"
-                        >
+
+                <mat-menu #invMenu="matMenu">
                     <button mat-menu-item>
-                    new group
+                        new group
                     </button>
                 </mat-menu>
             </div>
 
             <!-- SEARCH -->
-            <div class="search-wrapper"
-        fxFlex
-        fxLayout="row"
-        fxLayoutAlign="start center">
+            <div class="search-wrapper" fxFlex fxLayout="row" fxLayoutAlign="start center">
 
-        <div class="search"
-            fxFlex
-            fxLayout="row"
-            fxLayoutAlign="start center">
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
 
-            <mat-icon>search</mat-icon>
+                    <mat-icon>search</mat-icon>
 
-            <input #search
-                
-                type="text"
-                placeholder="Search Chat"
-                fxFlex>
+                    <input #search type="text" placeholder="Search Chat" fxFlex>
                 </div>
             </div>
-            <!-- / SEARCH -->  
+            <!-- / SEARCH -->
         </mat-toolbar-row>
-<!-- 
+        <!-- 
         <mat-toolbar-row>
          
         </mat-toolbar-row> -->
@@ -61,28 +47,26 @@
 
     <div class="sidenav-content">
         <div class="contact-list" *ngIf="userChatList.length > 0; else noChats">
-            <div class="contacts" 
-                *ngFor="let chat of userChatList">
-               {{chat.name}} {{chat.lastname}}
+            <div class="contacts" *ngFor="let chat of userChatList">
+                {{chat.name}} {{chat.lastname}}
 
-                <div>
-                    <button mat-icon-button
-                            [matMenuTriggerFor]="invMenu">
+                <div class="icon">
+                    <button mat-icon-button [matMenuTriggerFor]="invMenu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
                 </div>
                 <mat-menu #invMenu="matMenu">
                     <button mat-menu-item (click)="openProfile(chat)">
-                    Profil anzeigen
+                        Profil anzeigen
                     </button>
                     <button mat-menu-item>
-                    Chat löschen
+                        Chat löschen
                     </button>
                     <button mat-menu-item>
                         Chat archivieren
                     </button>
                 </mat-menu>
-                </div>
+            </div>
         </div>
 
         <ng-template #noChats>
