@@ -1,16 +1,13 @@
-
-
-<div class="auth">
+<div class="auth login">
     <div style="width: 50%;">
-        <form [formGroup]="login" >
-            Name: <input formControlName="name"  placeholder="Enter Name">
-            Password: <input formControlName="password"  placeholder="Enter Password">
-            <button type="submit">Submit</button> 
+        <form [formGroup]="login">
+            <div class="reg_tagAuth">Log-In</div>
+            <div class="reg_dataAuth">
+            Name: <input formControlName="name" placeholder="Enter Name">
+            Password: <input formControlName="password" placeholder="Enter Password">
+            </div>
+            <button type="submit">Submit</button>
         </form>
-        
-        <div>
-            <a [routerLink]="['/registration']">Register</a>
-        </div>
     </div>
 
     <app-registration style="width: 50%"></app-registration>
