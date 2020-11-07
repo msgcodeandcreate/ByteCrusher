@@ -1,7 +1,10 @@
-<form [formGroup]="registration" >
-    Name: <input formControlName="name"  placeholder="Enter Name">
-    Password: <input formControlName="password"  placeholder="Enter Password">
-    Repeat Password: <input formControlName="password2"  placeholder="Repeat Password">
-    Email: <input formControlName="email"  placeholder="Enter Email">
-    <button type="submit">Submit</button> 
+<form [formGroup]="registration">
+    <div class="reg_tag">Registration</div>
+    <div class="reg_data">
+        Name<input formControlName="name" placeholder="Enter Name">
+        Password<input type="password" formControlName="password" placeholder="Enter Password">
+        Repeat Password<input type="password" formControlName="password2" placeholder="Repeat Password">
+        Email<input formControlName="email" placeholder="Enter Email">
+    </div>
+    <button type="submit">Submit</button>
 </form>
