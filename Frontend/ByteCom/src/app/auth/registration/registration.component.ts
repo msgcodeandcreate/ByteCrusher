@@ -19,6 +19,8 @@ export class RegistrationComponent implements OnInit {
     email: new FormControl()
   });
 
+  public username: string;
+
   constructor(private chatService: ChatBackendService, private route: Router) { }
 
   ngOnInit(): void {
@@ -35,11 +37,12 @@ export class RegistrationComponent implements OnInit {
      LastName: formValue.lastname
    }
 
-    // await this.chatService.addPerson(user).subscribe(data => {
-    //   console.log(data)
-    // });
-
-    this.route.navigate(['/chat']);
+    this.chatService.addUser(user).subscribe(data => {
+      console.log(data);
+      this.username = data[0];
+    });
+    
+    this.route.navigate(['/chat', {name: this.username}]);
   }
 
 

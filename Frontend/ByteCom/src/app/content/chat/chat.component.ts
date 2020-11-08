@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import * as loggedUser from '../../../assets/loggedUser.json'
 
 @Component({
@@ -8,15 +10,17 @@ import * as loggedUser from '../../../assets/loggedUser.json'
 })
 export class ChatComponent implements OnInit {
 
-  public selectedChat: boolean = false;
+  public selectedChat: boolean = true;
   public date: Date =  new Date();
 
   public loggedUser = (loggedUser as any).default;
+  private sub: Subscription;
+  public userName: string;
   
-  
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.userName = this.route.snapshot.paramMap.get('name');
   }
 
 }
