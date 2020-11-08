@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -13,14 +14,15 @@ export class AuthComponent implements OnInit {
     password: new FormControl()
   });
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  public GoRegistration()
+  public Submit()
   {
-      console.log("Hi !");
+    const formValue = this.login.value;
+    this.route.navigate(['/chat', {name: "Nina"}]);
   }
 
 }

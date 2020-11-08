@@ -34,7 +34,10 @@
 
                     <!-- <mat-icon>search</mat-icon> -->
 
-                    <input #search type="text" placeholder="Search Chat" fxFlex>
+                    <input #search 
+                    [value]="searchText"
+                           (keyup)="searchText = search.value"
+                    type="text" placeholder="Search Chat" fxFlex>
                 </div>
             </div>
             <!-- / SEARCH -->

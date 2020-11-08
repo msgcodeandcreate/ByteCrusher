@@ -14,10 +14,12 @@ export class ChatsComponent implements OnInit {
   // public userChatList = ["test"]; 
 
   //Commented if userchatListLength === 0
-  // public userChatList = [];
+  // public userChatList = [];s
 
   public userChatList = (data as any).default;
   public chat: any;
+
+  searchText = '';
 
   constructor(public dialog: MatDialog) {
 

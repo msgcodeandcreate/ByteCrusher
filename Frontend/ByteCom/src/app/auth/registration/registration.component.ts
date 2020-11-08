@@ -29,23 +29,14 @@ export class RegistrationComponent implements OnInit {
   }
 
   public async CreateUser() {
-
-  const formValue = this.registration.value;
-
-   const user: User = {
-     Password: formValue.password,
-     E_Mail: formValue.email,
-     FirstName: formValue.firstname,
-     LastName: formValue.lastname
-   }
-
-    this.chatService.addUser(user).subscribe(data => {
-      console.log(data);     
-    });
-    
+    const formValue = this.registration.value;
+    const user: User = {
+      Password: formValue.password,
+      E_Mail: formValue.email,
+      FirstName: formValue.firstname,
+      LastName: formValue.lastname
+    }
+    this.chatService.addUser(user).subscribe();
     this.route.navigate(['/chat', {name: formValue.firstname}]);
-    // console.log(this.username, 'reg comp')
   }
-
-
 }

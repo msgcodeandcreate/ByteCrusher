@@ -23,6 +23,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ChatViewComponent } from './content/chat/chat-view/chat-view.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
+
 @NgModule({
   declarations: [
     AppComponent,

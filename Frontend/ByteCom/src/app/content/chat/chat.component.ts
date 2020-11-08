@@ -14,7 +14,6 @@ export class ChatComponent implements OnInit {
   public date: Date =  new Date();
 
   public loggedUser = (loggedUser as any).default;
-  private sub: Subscription;
   public userName: string;
 
   constructor(private route: ActivatedRoute) { }

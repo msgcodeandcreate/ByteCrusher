@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ChatBackendService } from 'src/app/services/chat-backend.service';
 import * as data from '../../../../../../../assets/contacts.json'
 
 @Component({
@@ -10,11 +11,14 @@ export class NewChatComponent implements OnInit {
   @Output() closeChatSideNav = new EventEmitter<boolean>();
 
   public contacts = (data as any).default;
-  constructor() { }
+
+  public userList = [];
+  constructor(private chatService: ChatBackendService) { }
 
   ngOnInit() {
-    
-  }
+    this.chatService.getUser().subscribe(data => 
+      console.log(data, 'userlist'))
+  };
 
   public toggleChatSideNav() {
     this.closeChatSideNav.emit();
