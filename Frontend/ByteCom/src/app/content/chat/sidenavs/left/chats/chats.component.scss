@@ -29,6 +29,7 @@ mat-icon {
     background: #FFFFFF;
     font-size: 13px;
     transition: 1s;
+    border-radius: 2rem;
 
     .icon {
         margin: 0;
@@ -38,13 +39,22 @@ mat-icon {
     input {
         padding-left: 12px;
         height: 2rem;
-        color: rgba(0, 0, 0, 0.54);
+        // color: rgba(0, 0, 0, 0.54);
+        color: black;
         border: none;
-        width: 90%;
+        width: 100%;
+        border-radius: 2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 0.1rem;
     }
 }
 
 .search input:hover {
+    background-color: rgba(196, 205, 209, 0.746);
+}
+
+.search input:focus {
+    outline: none;
     background-color: rgba(196, 205, 209, 0.746);
 }
 

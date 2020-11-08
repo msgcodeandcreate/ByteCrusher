@@ -14,7 +14,7 @@
         </mat-toolbar>
     </div>
 
-    <mat-sidenav-container>
+    <mat-sidenav-container id="chats-start-view">
 
         <!-- LEFT SIDENAV -->
         <mat-sidenav opened mode="side">
@@ -23,9 +23,9 @@
         <!-- / LEFT SIDENAV -->
 
         <!-- CONTENT -->
-        <div style="width: 640px; height: 499px;">
+        <div style="width: 100%; min-width: 880px; height: 499px;">
             <app-chat-start style="max-width: 100%;" *ngIf="!selectedChat"></app-chat-start>
-            <app-chat-view style="max-width: 100%;" *ngIf="selectedChat"> </app-chat-view>
+            <app-chat-view style="max-width: 100%;" *ngIf="selectedChat"></app-chat-view>
         </div>
         <!-- / CONTENT -->
 
