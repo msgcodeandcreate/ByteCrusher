@@ -16,11 +16,12 @@ export class ChatComponent implements OnInit {
   public loggedUser = (loggedUser as any).default;
   private sub: Subscription;
   public userName: string;
-  
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.userName = this.route.snapshot.paramMap.get('name');
+    this.route.params.forEach(param =>
+      this.userName = param['name']);
   }
 
 }

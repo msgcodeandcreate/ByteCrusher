@@ -1,4 +1,6 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
@@ -19,7 +21,7 @@ export class RegistrationComponent implements OnInit {
     email: new FormControl()
   });
 
-  public username: string;
+  public username = [];
 
   constructor(private chatService: ChatBackendService, private route: Router) { }
 
@@ -38,11 +40,11 @@ export class RegistrationComponent implements OnInit {
    }
 
     this.chatService.addUser(user).subscribe(data => {
-      console.log(data);
-      this.username = data[0];
+      console.log(data);     
     });
     
-    this.route.navigate(['/chat', {name: this.username}]);
+    this.route.navigate(['/chat', {name: formValue.firstname}]);
+    // console.log(this.username, 'reg comp')
   }
 
 
