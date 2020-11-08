@@ -20,6 +20,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ChatViewComponent } from './content/chat/chat-view/chat-view.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ChatsComponent,
     ChatStartComponent,
     NewChatComponent,
-    ProfileDialogComponent
+    ProfileDialogComponent,
+    ChatViewComponent
     
   ],
   imports: [
@@ -46,7 +49,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatExpansionModule,
     MatDialogModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

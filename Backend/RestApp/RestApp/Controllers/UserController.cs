@@ -13,17 +13,59 @@ namespace RestApp.Models
 {
   public class UserController : ApiController
   {
-    // GET: api/User
-    //public IEnumerable<string> Get()
-    //{
-    //    return new string[] { "value1", "value2" };
-    //}
+    //GET: api/User
+    public HttpResponseMessage Get()
+    {
+      try
+      {
+        // TODO implement database here
+        var users = new User[]
+        {
+          new User 
+          {
+            FirstName = "Max",
+            LastName = "Otto",
+            E_Mail = "max@otto.com",
+            UserId = 1,
+            Password = "1324",
+            Bio = "Some Bio",
+            Birthday = "18.09.1965"
+          }
+        };
+
+        return Request.CreateResponse(HttpStatusCode.OK, JsonConvert.SerializeObject(users));
+      }
+      catch (Exception ex)
+      {
+        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+      }
+      
+    }
 
     // GET: api/User/5
-    //public string Get(int id)
-    //{
-    //    return "value";
-    //}
+    public HttpResponseMessage Get(int id)
+    {
+      try
+      {
+        // TODO implement database here
+        var user = new User
+        {
+          FirstName = "Max",
+          LastName = "Otto",
+          E_Mail = "max@otto.com",
+          UserId = 1,
+          Password = "1324",
+          Bio = "Some Bio",
+          Birthday = "18.09.1965"
+        };
+
+        return Request.CreateResponse(HttpStatusCode.OK, JsonConvert.SerializeObject(user));
+      }
+      catch (Exception ex)
+      {
+        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+      }
+    }
 
     // post: api/user
     public HttpResponseMessage Post([FromBody] User user)
@@ -70,7 +112,7 @@ namespace RestApp.Models
 
     }
 
-
+   
 
   // PUT: api/User/5
   //public void Put(int id, [FromBody]string value)
