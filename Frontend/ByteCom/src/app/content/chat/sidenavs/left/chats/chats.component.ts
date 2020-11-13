@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProfileDialogComponent } from '../../../profile-dialog/profile-dialog.component';
-import * as data from '../../../../../../assets/contacts.json'
+import * as data from '../../../../../../assets/test.json'
 
 @Component({
   selector: 'app-chats',
@@ -9,12 +9,6 @@ import * as data from '../../../../../../assets/contacts.json'
   styleUrls: ['./chats.component.scss']
 })
 export class ChatsComponent implements OnInit {
-
-  //Commented if userChatList.length > 0
-  // public userChatList = ["test"]; 
-
-  //Commented if userchatListLength === 0
-  // public userChatList = [];s
 
   public userChatList = (data as any).default;
   public chat: any;

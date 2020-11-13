@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import * as loggedUser from '../../../assets/loggedUser.json'
 
@@ -10,17 +10,21 @@ import * as loggedUser from '../../../assets/loggedUser.json'
 })
 export class ChatComponent implements OnInit {
 
-  public selectedChat: boolean = true;
+  public selectedChat: boolean = false;
   public date: Date =  new Date();
 
   public loggedUser = (loggedUser as any).default;
   public userName: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.forEach(param =>
       this.userName = param['name']);
+  }
+
+  public LogOut() {
+    this.router.navigate(['/auth']);
   }
 
 }
